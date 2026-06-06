@@ -305,7 +305,7 @@ sass:
 jekyll-minifier:
   compress_css: false # CSS is already minified by Sass/Tailwind; the minifier's CSS pass corrupts custom properties (-- → " -  - ")
   compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js"]
+  exclude: ["robots.txt", "assets/js/search/*.js", "google5346b53045789fdb.html"]
 
 # -----------------------------------------------------------------------------
 # Terser
