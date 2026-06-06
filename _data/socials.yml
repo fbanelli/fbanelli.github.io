@@ -1,0 +1,7 @@
+# Social media links and usernames — displayed in the order defined here.
+# See jekyll-socials docs: https://github.com/george-gca/jekyll-socials
+cv_pdf: /assets/pdf/cv.pdf # path to your CV PDF file
+email: fbanelli@ethz.ch # your email address
+scholar_userid: Glx5cxMAAAAJ # your Google Scholar ID
+github_username: fbanelli # your GitHub username
+linkedin_username: francesco-banelli # your LinkedIn username

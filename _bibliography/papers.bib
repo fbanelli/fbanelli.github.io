@@ -1,0 +1,58 @@
+---
+---
+
+@article{terpin2026artofpiv,
+  abbr     = {In prep.},
+  title    = {ART of PIV: Agentic Real-Time Optical Flow for PIV},
+  author   = {Terpin, Antonio and Banelli, Francesco and Bonomi, Alan and D'Andrea, Raffaello},
+  year     = {2026}
+}
+
+@article{banelli2026flowgym,
+  abbr        = {SoftwareX},
+  bibtex_show = {true},
+  title       = {Flow Gym: A framework for the development, benchmarking, training, and deployment of flow-field quantification methods},
+  author      = {Banelli, Francesco and Terpin, Antonio and Bonomi, Alan and D'Andrea, Raffaello},
+  journal     = {SoftwareX},
+  year        = {2026},
+  abstract    = {Particle image velocimetry (PIV) and related optical-flow methods are widely used to quantify fluid motion, but their development and evaluation are often hindered by fragmented software, inconsistent interfaces, and limited reproducibility. To address these challenges, we present Flow Gym, a framework for developing, benchmarking, training, and deploying flow-field quantification methods, with a primary focus on PIV. Its core contribution is a standardized interface that allows classical and learning-based algorithms to be integrated, compared, and deployed within a common pipeline. The framework includes JAX implementations and wrappers for existing methods, modular pre-processing and post-processing components, and utilities for training and benchmarking. By leveraging JAX, Flow Gym supports hardware-accelerated execution while remaining interoperable with external implementations from libraries such as OpenCV and PyTorch. It can operate on both synthetic and experimental data and supports the same workflow for offline benchmarking and real-time deployment. Flow Gym is designed to improve reproducibility, reduce barriers to method development, and facilitate the translation of flow-field quantification algorithms from research to experimental settings.},
+  arxiv       = {2512.20642},
+  doi         = {10.1016/j.softx.2026.102641},
+  code        = {https://github.com/antonioterpin/flowgym},
+  selected    = {true}
+}
+
+@article{terpin2026synthpix,
+  abbr        = {SoftwareX},
+  bibtex_show = {true},
+  title       = {SynthPix: A lightspeed PIV image generator},
+  author      = {Terpin, Antonio and Bonomi, Alan and Banelli, Francesco and D'Andrea, Raffaello},
+  journal     = {SoftwareX},
+  year        = {2026},
+  abstract    = {We describe SynthPix, a synthetic image generator for Particle Image Velocimetry (PIV) with a focus on performance and parallelism on accelerators, implemented in JAX. SynthPix produces PIV image pairs from prescribed flow fields while exposing a configuration interface aligned with common PIV imaging and acquisition parameters (e.g., seeding density, particle image size, illumination nonuniformity, noise, blur, and timing). In contrast to offline dataset generation workflows, SynthPix is built to stream images on-the-fly directly into learning and benchmarking pipelines, enabling data-hungry methods and closed-loop procedures -- such as adaptive sampling and acquisition/parameter co-design -- without prohibitive storage and input-output costs. We demonstrate that SynthPix is compatible with a broad range of application scenarios, including controlled laboratory experiments and riverine image velocimetry, and supports rapid sweeps over nuisance factors for systematic robustness evaluation. SynthPix is a tool that supports the flow quantification community and in this paper we describe the main ideas behind the software package.},
+  arxiv       = {2512.09664},
+  doi         = {10.1016/j.softx.2026.102642},
+  code        = {https://github.com/antonioterpin/synthpix},
+  selected    = {true}
+}
+
+@article{bonomi2025pivadmm,
+  abbr        = {Preprint},
+  bibtex_show = {true},
+  title       = {Particle Image Velocimetry Refinement via Consensus ADMM},
+  author      = {Bonomi, Alan and Banelli, Francesco and Terpin, Antonio},
+  journal     = {arXiv preprint},
+  year        = {2025},
+  abstract    = {Particle Image Velocimetry (PIV) is an imaging technique in experimental fluid dynamics that quantifies flow fields around bluff bodies by analyzing the displacement of neutrally buoyant tracer particles immersed in the fluid. Traditional PIV approaches typically depend on tuning parameters specific to the imaging setup, making the performance sensitive to variations in illumination, flow conditions, and seeding density. On the other hand, even state-of-the-art machine learning methods for flow quantification are fragile outside their training set. In our experiments, we observed that flow quantification would improve if different tunings (or algorithms) were applied to different regions of the same image pair. In this work, we parallelize the instantaneous flow quantification with multiple algorithms and adopt a consensus framework based on the alternating direction method of multipliers, seamlessly incorporating priors such as smoothness and incompressibility. We perform several numerical experiments to demonstrate the benefits of this approach. For instance, we achieve a decrease in end-point-error of up to 20% of a dense-inverse-search estimator at an inference rate of 60Hz, and we show how this performance boost can be increased further with outlier rejection. Our method is implemented in JAX, effectively exploiting hardware acceleration, and integrated in Flow Gym, enabling (i) reproducible comparisons with the state-of-the-art, (ii) testing different base algorithms, (iii) straightforward deployment for active fluids control applications.},
+  arxiv       = {2512.11695},
+  selected    = {true}
+}
+
+@misc{banelli2023acceleration,
+  abbr        = {Project},
+  title       = {Learned Acceleration Estimator},
+  author      = {Banelli, Francesco},
+  year        = {2023},
+  abstract    = {A neural estimator trained to predict drone accelerations directly from command sequences, replacing IMU sensors in the state-estimation pipeline.},
+  code        = {https://github.com/fbanelli/learned-acceleration-estimator}
+}
